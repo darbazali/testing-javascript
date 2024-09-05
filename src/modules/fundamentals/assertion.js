@@ -10,9 +10,9 @@ const expect = (actual) => {
   }
 }
 
-const test = (title, callback) => {
+const test = async (title, callback) => {
   try {
-    callback()
+    await callback()
     console.log(`✅ ${title}`)
   } catch (error) {
     console.error(`❌ ${title}`)
