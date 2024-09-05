@@ -1,4 +1,4 @@
-import { sum, subtract } from "./math"
+import { sum } from "./math.js"
 
 const expect = (actual) => {
   return {
@@ -10,12 +10,7 @@ const expect = (actual) => {
   }
 }
 
-let result = sum(3, 7)
-let expected = 10
-
-expect(result).toBe(expected)
-
-result = subtract(4, 4)
-expected = 0
+const result = sum(7, 3)
+const expected = 10
 
 expect(result).toBe(expected)
