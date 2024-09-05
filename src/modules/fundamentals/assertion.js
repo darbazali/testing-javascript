@@ -1,12 +1,12 @@
-import { sum , subtract} from "./math.js"
+import { sum, subtract } from "./math.js"
 
-const expect = actual => {
+const expect = (actual) => {
   return {
     toBe(expected) {
       if (actual !== expected) {
         throw new Error(`${actual} is not equal to ${expected}`)
       }
-    }
+    },
   }
 }
 
@@ -20,10 +20,10 @@ const test = (title, callback) => {
   }
 }
 
-test('sum', () => {
+test("sum", () => {
   expect(sum(3, 7)).toBe(10)
 })
 
-test('subtract', () => {
+test("subtract", () => {
   expect(subtract(7, 7)).toBe(0)
 })
