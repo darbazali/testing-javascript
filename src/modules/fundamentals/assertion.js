@@ -23,3 +23,7 @@ const test = (title, callback) => {
 test("sum should sum 2 numbers correctly", () => {
   expect(sum(1, 2)).toBe(3)
 })
+
+test("subtract should subtract 2 numbers correctly ", () => {
+  expect(subtract(1, 2)).toBe(-1)
+})
