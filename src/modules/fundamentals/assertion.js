@@ -1,16 +1,15 @@
 import { sum } from "./math.js"
 
-const expect = (actual) => {
+const expect = actual => {
   return {
     toBe(expected) {
       if (actual !== expected) {
+        console.log('actual: ', actual)
+        console.log('expected: ', expected)
         throw new Error(`${actual} is not equal to ${expected}`)
       }
-    },
+    }
   }
 }
 
-const result = sum(7, 3)
-const expected = 10
-
-expect(result).toBe(expected)
+expect(sum(3, 7)).toBe(10)
