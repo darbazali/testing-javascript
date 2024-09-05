@@ -10,4 +10,16 @@ const expect = (actual) => {
   }
 }
 
-expect(sum(4, 4)).toBe(8)
+const test = (title, callback) => {
+  try {
+    callback()
+    console.log(`✅ ${title}`)
+  } catch (error) {
+    console.error(`❌ ${title}`)
+    console.error(error)
+  }
+}
+
+test("sum should sum 2 numbers correctly", () => {
+  expect(sum(1, 2)).toBe(3)
+})
