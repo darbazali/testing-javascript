@@ -7,3 +7,5 @@ const expect = (actual) => {
     },
   }
 }
+
+export default expect
